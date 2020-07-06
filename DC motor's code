@@ -1,0 +1,61 @@
+int nl=3;
+int nll=5;
+
+int al=10;
+int all=11;
+void setup()
+{
+  pinMode(nl, OUTPUT);
+  pinMode(nll, OUTPUT);
+  pinMode(al, OUTPUT);
+  pinMode(all, OUTPUT);
+}
+void dirction1(){
+  digitalWrite(nl,1);
+  digitalWrite(nll,0);
+  digitalWrite(al,0);
+  digitalWrite(all,1);
+}
+void dirction2(){
+  digitalWrite(nl,0);
+  digitalWrite(nll,1);
+  digitalWrite(al,1);
+  digitalWrite(all,0);
+}
+void dirction3(){
+  digitalWrite(nl,1);
+  digitalWrite(nll,0);
+  digitalWrite(al,1);
+  digitalWrite(all,0);
+}
+void dirction4(){
+  digitalWrite(nl,0);
+  digitalWrite(nll,1);
+  digitalWrite(al,0);
+  digitalWrite(all,1);
+}
+void stop1(){
+  digitalWrite(nl,0);
+  digitalWrite(nll,0);
+  digitalWrite(al,0);
+  digitalWrite(all,0);
+}
+
+void loop(){
+ dirction1();
+  delay(1000);
+  stop1();
+   delay(1000);
+   dirction2();
+  delay(1000);
+  stop1();
+   delay(1000);
+   dirction3();
+  delay(1000);
+  stop1();
+   delay(1000);
+   dirction4();
+  delay(1000);
+  stop1();
+   delay(1000);
+}
